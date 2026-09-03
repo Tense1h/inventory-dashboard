@@ -102,3 +102,43 @@ main{
     border-radius: 8px;
     padding: 1rem;
 }
+
+.product-name{
+    margin: 0 0 0.35rem;
+    font-size: 1.05rem;
+}
+
+.product-category{
+    margin: 0 0 0.5rem;
+    font-size: 0.85rem;
+}
+
+.product-price{
+    margin: 0 0 0.35rem;
+    font-weight: 600;
+}
+
+.product-stock{
+    margin: 0 0 0.5rem;
+    font-size: 0.9rem;
+}
+
+.product-status{
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-size: 600;
+}
+
+.product-status.in-stock{
+    background-color: lightgreen;
+}
+
+.product-status.low-stock{
+    background-color: lightyellow;
+}
+
+.product-status.out-of-stock{
+    background-color: lightcoral;
+}
