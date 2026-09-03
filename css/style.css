@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: rgba(103, 27, 27, 0.372);
+}
+
+header{
+    background-color: darkblue;
+    color: white;
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+}
+
+header h1{
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+main{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.controls{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.controls input,
+.controls select{
+    padding: 0.5rem 0.75rem;
+    border: 1px solid red;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.controls input{
+    flex: 1;
+    min-width: 100px;
+}
+
+.controls button{
+    padding: 0.5rem 1.25rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    color: white;
+    background-color: darkblue;
+}
+
+.summary{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.summary-item {
+    flex: 1;
+    min-width: 180px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.summary-label{
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 0.35rem;
+}
+
+.summary-value{
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 2rem 0;
+}
+
+.no-result{
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 2rem 0;
+}
+
+.product-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.product-card{
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+}

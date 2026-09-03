@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Product Inventory Dashboard</h1>
+    </header>
+
+    <main>
+        <section class="controls">
+            <input type="text"
+            id="searchInput"
+            placeholder="Enter product name"
+            >
+            <select id="categoryFilter">
+                <option value="All">All</option>
+                <option value="Accessories">Accessories</option>
+                <option value="Displays">Displays</option>
+                <option value="Storage">Storage</option>
+                <option value="Components">Components</option>
+            </select>
+            <button id="searchButton">Search</button>
+            <button id="resetButton">Reset</button>
+        </section>
+
+        <section class="summary">
+            <div class="summary-item">
+                <span class="summary-label">Total Inventory Value</span>
+                <span id="totalInventoryValue" class="summary-value">P0</span>
+            </div>
+            <div class="summary-item">
+                <span class="summary-label">low-Stock Product</span>
+                <span id="lowStockCount" class="summary-value">0</span>
+            </div>
+        </section>
+        <p id="noResultsMessage" class="no-results" style="display: none;">No Product Found</p>
+        <section id="productList" class="product-list"></section>
+    </main>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
