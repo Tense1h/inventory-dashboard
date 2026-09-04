@@ -4,7 +4,7 @@ export function displayProducts(products){
     const noResultsMessage = document.getElementById("noResultsMessage");
     productList.innerHTML = "";
     if (products.length === 0){
-        noResultsMessage.textContent = "No product found";
+        noResultsMessage.textContent = "No products found";
         noResultsMessage.style.display = "block";
         return;
     }
@@ -22,7 +22,7 @@ export function displayProducts(products){
        card.innerHTML = `
        <h3 class="product-name">${name}</h3>
        <p class="product-category">${category}</p>
-       <p class="product-price">P${price.toLocaleString()}</p>
+       <p class="product-price">₱${price.toLocaleString()}</p>
        <p class="product-stock">stock: ${stock}</p>
        <p class="product-status ${statusClass}">${status}</p>
        `;
@@ -32,7 +32,7 @@ export function displayProducts(products){
 
 export function displayTotalInventoryValue(total){
     const totalInventoryValue = document.getElementById("totalInventoryValue");
-    totalInventoryValue.textContent = `P${total.toLocaleString()}`;
+    totalInventoryValue.textContent = `₱${total.toLocaleString()}`;
 }
 
 

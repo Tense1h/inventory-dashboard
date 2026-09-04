@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product Inventory</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -24,21 +24,25 @@
                 <option value="Storage">Storage</option>
                 <option value="Components">Components</option>
             </select>
-            <button id="searchButton">Search</button>
-            <button id="resetButton">Reset</button>
+            <button id="searchBtn">Search</button>
+            <button id="resetBtn">Reset</button>
         </section>
 
         <section class="summary">
             <div class="summary-item">
                 <span class="summary-label">Total Inventory Value</span>
-                <span id="totalInventoryValue" class="summary-value">P0</span>
+                <span id="totalInventoryValue" class="summary-value">₱0</span>
             </div>
             <div class="summary-item">
-                <span class="summary-label">low-Stock Product</span>
+                <span class="summary-label">Low-Stock Products</span>
                 <span id="lowStockCount" class="summary-value">0</span>
             </div>
+            <div class="summary-item">
+                 <span class="summary-label">Out-of-Stock Products</span>
+                 <span id="outOfStockCount" class="summary-value">0</span>
+            </div>
         </section>
-        <p id="noResultsMessage" class="no-results" style="display: none;">No Product Found</p>
+        <p id="noResultsMessage" class="no-results" style="display: none;">No products found</p>
         <section id="productList" class="product-list"></section>
     </main>
     <script type="module" src="js/main.js"></script>

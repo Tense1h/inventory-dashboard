@@ -1,4 +1,4 @@
-import { products } from "./product.js";
+import { products } from "./products.js";
 import{
     searchProducts,
     filterProductsByCategory,
@@ -10,8 +10,8 @@ import{ displayProducts, displaySummary} from "./display.js";
 
 const searchInput = document.getElementById("searchInput");
 const categoryFilter = document.getElementById("categoryFilter");
-const searchButton = document.getElementById("searchButton");
-const resetButton = document.getElementById("resetButton");
+const searchButton = document.getElementById("searchBtn");
+const resetButton = document.getElementById("resetBtn");
 
 function updateDisplay(){
     const query = searchInput.value;

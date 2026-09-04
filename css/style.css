@@ -85,7 +85,7 @@ main{
     padding: 2rem 0;
 }
 
-.no-result{
+.no-results{
     text-align: center;
     font-size: 1.1rem;
     padding: 2rem 0;
@@ -128,17 +128,20 @@ main{
     padding: 0.25rem 0.6rem;
     border-radius: 999px;
     font-size: 0.8rem;
-    font-size: 600;
+    font-weight: 600;
 }
 
 .product-status.in-stock{
     background-color: lightgreen;
+    color: green;
 }
 
 .product-status.low-stock{
     background-color: lightyellow;
+    color: yellow;
 }
 
 .product-status.out-of-stock{
     background-color: lightcoral;
+    color: red;
 }
