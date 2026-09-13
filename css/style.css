@@ -1,147 +1,132 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
-    margin: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background-color: rgba(103, 27, 27, 0.372);
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #222;
 }
 
-header{
-    background-color: darkblue;
-    color: white;
-    padding: 1.25rem 1.5rem;
-    text-align: center;
+header {
+  background-color: red;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
 }
 
-header h1{
-    margin: 0;
-    font-size: 1.6rem;
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
-main{
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 1.5rem;
-}
-
-.controls{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-bottom: 1.5rem;
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .controls input,
-.controls select{
-    padding: 0.5rem 0.75rem;
-    border: 1px solid red;
-    border-radius: 6px;
-    font-size: 0.95rem;
+.controls select {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
 }
 
-.controls input{
-    flex: 1;
-    min-width: 100px;
+
+.controls button {
+  cursor: pointer;
 }
 
-.controls button{
-    padding: 0.5rem 1.25rem;
-    border: none;
-    border-radius: 6px;
-    font-size: 0.95rem;
-    cursor: pointer;
-    color: white;
-    background-color: darkblue;
-}
-
-.summary{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  padding: 0.75rem;
 }
 
 .summary-item {
-    flex: 1;
-    min-width: 180px;
-    background-color: white;
-    border-radius: 8px;
-    padding: 1rem;
-    text-align: center;
+  flex: 1;
+  min-width: 180px;
+  text-align: center;
 }
 
-.summary-label{
-    display: block;
-    font-size: 0.85rem;
-    margin-bottom: 0.35rem;
+.summary-label {
+  display: block;
+  font-size: 0.85rem;
+  color: #555;
 }
 
-.summary-value{
-    display: block;
-    font-size: 1.4rem;
-    font-weight: 600;
-    padding: 2rem 0;
+.summary-value {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-.no-results{
-    text-align: center;
-    font-size: 1.1rem;
-    padding: 2rem 0;
+.message-area {
+  text-align: center;
+  color: #b91c1c;
+  min-height: 1.5rem;
 }
 
-.product-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 1rem;
+.student-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
 }
 
-.product-card{
-    background-color: white;
-    border-radius: 8px;
-    padding: 1rem;
+.student-card {
+border: 1px solid #ccc;
+  padding: 0.75rem;
+
 }
 
-.product-name{
-    margin: 0 0 0.35rem;
-    font-size: 1.05rem;
+.student-name {
+  margin: 0 0 0.25rem;
 }
 
-.product-category{
-    margin: 0 0 0.5rem;
-    font-size: 0.85rem;
+.student-block {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
 }
 
-.product-price{
-    margin: 0 0 0.35rem;
-    font-weight: 600;
+.student-scores {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
 }
 
-.product-stock{
-    margin: 0 0 0.5rem;
-    font-size: 0.9rem;
+.student-final {
+  margin: 0 0 0.35rem;
+  font-weight: bold;
 }
 
-.product-status{
-    display: inline-block;
-    padding: 0.25rem 0.6rem;
-    border-radius: 999px;
-    font-size: 0.8rem;
-    font-weight: 600;
+.student-status {
+  font-weight: bold;
 }
 
-.product-status.in-stock{
-    background-color: lightgreen;
-    color: green;
+.student-status.excellent {
+  color: #15803d;
 }
 
-.product-status.low-stock{
-    background-color: lightyellow;
-    color: yellow;
+.student-status.passed {
+  color: #1d4ed8;
 }
 
-.product-status.out-of-stock{
-    background-color: lightcoral;
-    color: red;
+.student-status.needs-improvement {
+  color: #a16207;
+}
+
+.student-status.failed {
+  color: #b91c1c;
+}
+
+.student-remark {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  font-style: italic;
 }

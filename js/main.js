@@ -1,47 +1,54 @@
-import { products } from "./products.js";
-import{
-    searchProducts,
-    filterProductsByCategory,
-    calculateTotalInventoryValue,
-    countLowStockProducts,
-    countOutOfStockProducts
-} from "./inventoryUtils.js";
-import{ displayProducts, displaySummary} from "./display.js";
+import { students } from "./students.js";
+import {
+  searchStudents,
+  filterStudentsByBlock,
+  filterStudentsByStatus
+} from "./gradeUtils.js";
+import {
+  displayStudents,
+  displaySummary,
+  displayMessage
+} from "./display.js";
 
 const searchInput = document.getElementById("searchInput");
-const categoryFilter = document.getElementById("categoryFilter");
-const searchButton = document.getElementById("searchBtn");
-const resetButton = document.getElementById("resetBtn");
+const blockFilter = document.getElementById("blockFilter");
+const statusFilter = document.getElementById("statusFilter");
+const applyBtn = document.getElementById("applyBtn");
+const resetBtn = document.getElementById("resetBtn");
 
-function updateDisplay(){
-    const query = searchInput.value;
-    const category = categoryFilter.value;
+function applyFilters() {
+  const query = searchInput.value;
+  const block = blockFilter.value;
+  const status = statusFilter.value;
 
-    let result = searchProducts(products, query);
-    result = filterProductsByCategory(result, category);
-    displayProducts(result);
+  let result = searchStudents(students, query);
+  result = filterStudentsByBlock(result, block);
+  result = filterStudentsByStatus(result, status);
 
-    const total = calculateTotalInventoryValue(products);
-    const lowStockCount = countLowStockProducts(products);
-    const outOfStockCount = countOutOfStockProducts(products);
-    displaySummary(total, lowStockCount, outOfStockCount);
+  displayStudents(result);
+  displaySummary(result);
+
+  if (result.length === 0) {
+    displayMessage("No students found");
+  } else {
+    displayMessage("");
+  }
 }
 
-function resetFilters(){
-    searchInput.value = "";
-    categoryFilter.value = "All";
-    updateDisplay();
+function resetFilters() {
+  searchInput.value = "";
+  blockFilter.value = "All";
+  statusFilter.value = "All";
+  displayMessage("");
+  displayStudents(students);
+  displaySummary(students);
 }
 
-searchButton.addEventListener("click", updateDisplay);
-resetButton.addEventListener("click", resetFilters);
+applyBtn.addEventListener("click", applyFilters);
+resetBtn.addEventListener("click", resetFilters);
 
-searchInput.addEventListener("keydown", (event) => {
-    if (event.key === "Enter"){
-        updateDisplay();
-    }
-});
+searchInput.addEventListener("input", applyFilters);
 
-categoryFilter.addEventListener("change", updateDisplay);
 
-document.addEventListener("DOMContentLoaded", updateDisplay);
+displayStudents(students);
+displaySummary(students);

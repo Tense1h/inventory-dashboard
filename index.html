@@ -1,50 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Inventory</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Performance Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <header>
-        <h1>Product Inventory Dashboard</h1>
-    </header>
+  <header>
+    <h1>Student Performance Dashboard</h1>
+  </header>
 
-    <main>
-        <section class="controls">
-            <input type="text"
-            id="searchInput"
-            placeholder="Enter product name"
-            >
-            <select id="categoryFilter">
-                <option value="All">All</option>
-                <option value="Accessories">Accessories</option>
-                <option value="Displays">Displays</option>
-                <option value="Storage">Storage</option>
-                <option value="Components">Components</option>
-            </select>
-            <button id="searchBtn">Search</button>
-            <button id="resetBtn">Reset</button>
-        </section>
+  <main>
+    <section class="controls">
+      <input type="text" id="searchInput" placeholder="Enter student name" />
+      <select id="blockFilter">
+        <option value="All">All</option>
+        <option value="31-ITE-01">31-ITE-01</option>
+        <option value="31-ITE-02">31-ITE-02</option>
+        <option value="31-ITE-03">31-ITE-03</option>
+      </select>
+      <select id="statusFilter">
+        <option value="All">All</option>
+        <option value="Excellent">Excellent</option>
+        <option value="Passed">Passed</option>
+        <option value="Needs Improvement">Needs Improvement</option>
+        <option value="Failed">Failed</option>
+      </select>
+      <button id="applyBtn">Apply Filters</button>
+      <button id="resetBtn">Reset</button>
+    </section>
 
-        <section class="summary">
-            <div class="summary-item">
-                <span class="summary-label">Total Inventory Value</span>
-                <span id="totalInventoryValue" class="summary-value">₱0</span>
-            </div>
-            <div class="summary-item">
-                <span class="summary-label">Low-Stock Products</span>
-                <span id="lowStockCount" class="summary-value">0</span>
-            </div>
-            <div class="summary-item">
-                 <span class="summary-label">Out-of-Stock Products</span>
-                 <span id="outOfStockCount" class="summary-value">0</span>
-            </div>
-        </section>
-        <p id="noResultsMessage" class="no-results" style="display: none;">No products found</p>
-        <section id="productList" class="product-list"></section>
-    </main>
-    <script type="module" src="js/main.js"></script>
+    <section class="summary">
+      <div class="summary-item">
+        <span class="summary-label">Class Average</span>
+        <span id="classAverage" class="summary-value">0.00</span>
+      </div>
+      <div class="summary-item">
+        <span class="summary-label">Passing Students</span>
+        <span id="passingCount" class="summary-value">0</span>
+      </div>
+      <div class="summary-item">
+        <span class="summary-label">Displayed Students</span>
+        <span id="displayedCount" class="summary-value">0</span>
+      </div>
+      <div class="summary-item">
+        <span class="summary-label">Top Student</span>
+        <span id="topStudent" class="summary-value">N/A</span>
+      </div>
+    </section>
+
+    <div id="messageArea" class="message-area"></div>
+
+    <section id="studentList" class="student-list"></section>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
